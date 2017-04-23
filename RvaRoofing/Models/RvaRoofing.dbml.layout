@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RvaRoofing">
+  <DataContextMoniker Name="/RvaRoofingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4bfe17d5-867c-405e-a6ca-1c8a67b6b1f0" absoluteBounds="0.5, 0.5, 2, 0.8093896484375">
+      <DataClassMoniker Name="/RvaRoofingDataContext/Test" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c978607a-a935-4ed4-b345-c8ec6dbb2a46" absoluteBounds="0.5, 0.5, 0.125, 0.2493896484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

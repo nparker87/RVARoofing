@@ -1,0 +1,78 @@
+﻿@model RvaRoofing.ViewModels.BaseViewModel
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>RVA Roofing | @ViewBag.Title</title>
+	<link rel="icon" type="image/png" href="~/Content/Images/erek_crest.png" />
+	<link href="@Url.Content("~/Content/themes/custom/jquery-ui.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/themes/custom/jquery-ui.theme.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/jquery.jqGrid/ui.jqgrid.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/Less/Site.less")" rel="stylesheet/less" type="text/css" />
+	<style type="text/css">
+		html {
+			font: 14px Trebuchet MS,Arial,Helvetica,sans-serif;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: #c6c6c6;
+			height: 100%;
+		}
+
+		h2 {
+			margin: 0;
+			text-align: center;
+		}
+
+		.wrapper {
+			margin-left: auto;
+			margin-right: auto;
+			width: 85%;
+		}
+	</style>
+	@RenderSection("Head", false)
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<ul id="social">
+				<li id="fb">
+					<a target="_blank" href="https://www.facebook.com" title="Facebook"></a>
+				</li>
+			</ul>
+		</header>
+		<div class="inner-wrapper">
+			<nav>
+				<ul>
+					<li class="@(Model.CurrentTab == "Home" ? "selected" : "")">
+						@Html.ActionLink("Home", "Index", "Home")
+					</li>
+					<li class="@(Model.CurrentTab == "About" ? "selected" : "")">
+						@Html.ActionLink("About", "Index", "About")
+					</li>
+					<li class="@(Model.CurrentTab == "Contact" ? "selected" : "")">
+						@Html.ActionLink("Contact", "Index", "Contact")
+					</li>
+				</ul>
+			</nav>
+			<div class="main-content">
+				@RenderBody()
+			</div>
+		</div>
+		<footer>
+			RVA Roofing | <a href="mailto:rvaroofing.inc@gmail.com">Contact</a> | 8057 Elm Dr Mechanicsville, VA 23111-1160<br />
+			Address | @Html.ActionLink("Privacy", "Index", "Privacy")
+		</footer>
+	</div>
+	<script src="~/Scripts/jquery-2.1.3.js"></script>
+	<script src="~/Scripts/jquery-ui-1.11.1.js"></script>
+	<script src="~/Scripts/jquery.validate.js"></script>
+	<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+	<script src="~/Scripts/less-2.3.1.js"></script>
+	<script src="~/Scripts/Global.js"></script>
+	@RenderSection("Scripts", false)
+</body>
+</html>
