@@ -1,24 +1,29 @@
-﻿@{
+﻿@using RvaRoofing.Helpers
+@model RvaRoofing.ViewModels.ContactViewModel
+@{
 	ViewBag.Title = "Contact";
 }
 
 <h2>Contact</h2>
-<p>
-	Phone: (804) 774-1664
-</p>
-<p>
-	Email: c
-</p>
-
-<p>
-	<label>From:</label>
-	<input type="text" />
-</p>
-<p>
-	<label>Subject:</label>
-	<input type="text" />
-</p>
-<p>
-	<label>Message:</label>
-	<textarea></textarea>
-</p>
+<fieldset>
+	<ul>
+		<li>
+			@Html.RequriedLabelFor(model => model.FromEmail)
+			@Html.TextBoxFor(model => model.FromEmail)
+			@Html.ValidationMessageFor(model => model.FromEmail)
+		</li>
+		<li>
+			@Html.RequriedLabelFor(model => model.Subject)
+			@Html.TextBoxFor(model => model.Subject)
+			@Html.ValidationMessageFor(model => model.Subject)
+		</li>
+		<li>
+			@Html.RequriedLabelFor(model => model.Message)
+			@Html.TextAreaFor(model => model.Message)
+			@Html.ValidationMessageFor(model => model.Message)
+		</li>
+		<li class="submit">
+			<input type="submit" value="Submit" />
+		</li>
+	</ul>
+</fieldset>

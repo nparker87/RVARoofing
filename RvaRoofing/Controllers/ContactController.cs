@@ -7,12 +7,7 @@
 	{
 		public ActionResult Index()
 		{
-			var viewModel = new BaseViewModel
-			{
-				CurrentTab = "Contact"
-			};
-
-			return View(viewModel);
+			return View(new ContactViewModel());
 		}
 	}
 }

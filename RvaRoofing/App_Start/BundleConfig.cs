@@ -11,6 +11,7 @@
 #endif
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
+				"~/Bootstrap/css/bootstrap.css",
 				"~/Content/Less/Site.less"));
 
 			bundles.Add(new ScriptBundle("~/Scripts").Include(

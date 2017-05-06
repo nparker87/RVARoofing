@@ -151,6 +151,11 @@
     <Content Include="Bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Images\required_star.png" />
+    <Content Include="Content\Images\SocialMedia\facebook.png" />
+    <Content Include="Content\Images\SocialMedia\instagram.png" />
+    <Content Include="Content\Images\SocialMedia\twitter.png" />
+    <Content Include="Content\Images\SocialMedia\youtube.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -195,6 +200,7 @@
     <Content Include="Global.asax" />
     <Content Include="git.ignore" />
     <Content Include="Content\Less\Site.less" />
+    <None Include="Properties\PublishProfiles\--Live--.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\Global.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -227,6 +233,7 @@
     </Compile>
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\Dynamic.cs" />
+    <Compile Include="Helpers\HtmlExtensions.cs" />
     <Compile Include="Helpers\MiniProfilerHelper.cs" />
     <Compile Include="Models\RvaRoofing.designer.cs">
       <AutoGen>True</AutoGen>
@@ -236,6 +243,7 @@
     <Compile Include="Models\RvaRoofingDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
