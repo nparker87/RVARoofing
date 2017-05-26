@@ -1,29 +1,43 @@
 ﻿@using RvaRoofing.Helpers
 @model RvaRoofing.ViewModels.ContactViewModel
 @{
-	ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact";
 }
 
 <h2>Contact</h2>
-<fieldset>
-	<ul>
-		<li>
-			@Html.RequriedLabelFor(model => model.FromEmail)
-			@Html.TextBoxFor(model => model.FromEmail)
-			@Html.ValidationMessageFor(model => model.FromEmail)
-		</li>
-		<li>
-			@Html.RequriedLabelFor(model => model.Subject)
-			@Html.TextBoxFor(model => model.Subject)
-			@Html.ValidationMessageFor(model => model.Subject)
-		</li>
-		<li>
-			@Html.RequriedLabelFor(model => model.Message)
-			@Html.TextAreaFor(model => model.Message)
-			@Html.ValidationMessageFor(model => model.Message)
-		</li>
-		<li class="submit">
-			<input type="submit" value="Submit" />
-		</li>
-	</ul>
-</fieldset>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true).Raw()
+    <fieldset>
+        <ul>
+            <li>
+                @Html.RequriedLabelFor(model => model.FirstName)
+                @Html.TextBoxFor(model => model.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </li>
+            <li>
+                @Html.RequriedLabelFor(model => model.LastName)
+                @Html.TextBoxFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </li>
+            <li>
+                @Html.RequriedLabelFor(model => model.FromEmail)
+                @Html.TextBoxFor(model => model.FromEmail)
+                @Html.ValidationMessageFor(model => model.FromEmail)
+            </li>
+            <li>
+                @Html.RequriedLabelFor(model => model.PhoneNumber)
+                @Html.TextBoxFor(model => model.PhoneNumber)
+                @Html.ValidationMessageFor(model => model.PhoneNumber)
+            </li>
+            <li>
+                @Html.RequriedLabelFor(model => model.Message)
+                @Html.TextAreaFor(model => model.Message)
+                @Html.ValidationMessageFor(model => model.Message)
+            </li>
+            <li>
+                <input type="submit" value="Submit" />
+            </li>
+        </ul>
+    </fieldset>
+}

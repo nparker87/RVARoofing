@@ -1,0 +1,172 @@
+﻿html {
+    box-sizing: border-box;
+    font: 14px Trebuchet MS,Arial,Helvetica,sans-serif;
+    height: 100%;
+    padding: 0;
+}
+
+body {
+    background-color: #c6c6c6;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+h2 {
+    margin: 0;
+}
+
+/* Header */
+header {
+    padding: 0 0 5% 0;
+}
+
+ul#social {
+    float: right;
+    margin: 0;
+}
+
+    ul#social li {
+        display: inline-block;
+        list-style: none;
+        padding: 0 5px 0 0;
+    }
+
+        ul#social li a {
+            display: block;
+            height: 30px;
+            width: 30px;
+        }
+
+        ul#social li#fb a {
+            background: url(/Content/Images/SocialMedia/facebook.png) no-repeat;
+        }
+
+        ul#social li#ig a {
+            background: url(/Content/Images/SocialMedia/instagram.png) no-repeat;
+        }
+
+nav {
+    text-align: center;
+}
+
+    nav ul {
+        background-color: #333333;
+        list-style: none;
+        overflow: hidden;
+        padding: 0;
+    }
+
+        nav ul li {
+            float: left;
+        }
+
+            nav ul li a {
+                color: #ffffff;
+                display: block;
+                text-align: center;
+                padding: 1em;
+                text-decoration: none;
+            }
+
+                nav ul li a:hover {
+                    background-color: #111111;
+                }
+
+/* Main styles */
+
+.wrapper {
+}
+
+footer {
+    background-color: #efefef;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+label.required span {
+    background: url(/Content/Images/required_star.png) no-repeat scroll right center;
+    padding: 0 16px 0 0;
+}
+
+.main-content {
+    text-align: center;
+}
+
+    .main-content fieldset {
+        border: none;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+        .main-content fieldset ul {
+            list-style: outside none none;
+        }
+
+            .main-content fieldset ul li {
+                text-align: left;
+            }
+
+                .main-content fieldset ul li label {
+                }
+
+                .main-content fieldset ul li input[type="text"],
+                .main-content fieldset ul li textarea {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin: 6px 0 16px 0;
+                    padding: 12px;
+                    resize: vertical;
+                    width: 95%;
+                }
+
+                .main-content fieldset ul li input[type="submit"] {
+                    background-color: #4CAF50;
+                    border: none;
+                    border-radius: 4px;
+                    color: white;
+                    cursor: pointer;
+                    padding: 12px 20px;
+                }
+
+                    .main-content fieldset ul li input[type="submit"]:hover {
+                        background-color: #45a049;
+                    }
+
+/* Styles for validation helpers */
+.field-validation-error {
+    color: #FF0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    background-color: #FFEEEE;
+    border: 1px solid #FF0000;
+}
+
+.validation-summary-errors {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Misc styles */
+
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}

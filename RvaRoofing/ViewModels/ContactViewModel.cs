@@ -1,25 +1,33 @@
 ﻿namespace RvaRoofing.ViewModels
 {
-	using System.ComponentModel;
-	using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
-	public class ContactViewModel : BaseViewModel
-	{
-		public ContactViewModel()
-		{
-			CurrentTab = "Contact";
-		}
+    public class ContactViewModel : BaseViewModel
+    {
+        public ContactViewModel()
+        {
+            CurrentTab = "Contact";
+        }
 
-		[DisplayName("From:")]
-		[Required(ErrorMessage = "Required")]
-		public string FromEmail { get; set; }
+        [DisplayName("First Name")]
+        [Required]
+        public string FirstName { get; set; }
 
-		[DisplayName("Subject:")]
-		[Required(ErrorMessage = "Required")]
-		public string Subject { get; set; }
+        [DisplayName("Last Name")]
+        [Required]
+        public string LastName { get; set; }
 
-		[DisplayName("Message:")]
-		[Required(ErrorMessage = "Required")]
-		public string Message { get; set; }
-	}
+        [DisplayName("Email")]
+        [Required]
+        public string FromEmail { get; set; }
+
+        [DisplayName("Phone Number")]
+        [Required]
+        public string PhoneNumber { get; set; }
+
+        [DisplayName("Message")]
+        [Required]
+        public string Message { get; set; }
+    }
 }

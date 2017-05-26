@@ -4,44 +4,47 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>RVA Roofing | @ViewBag.Title</title>
-	@Styles.Render("~/Content/css")
-	@RenderSection("Head", false)
+    <title>RVA Roofing | @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @RenderSection("Head", false)
 </head>
 <body>
-	<div class="wrapper">
-		<header>
-			<ul id="social">
-				<li id="fb">
-					<a target="_blank" href="https://www.facebook.com" title="Facebook"></a>
-				</li>
-				<li id="ig">
-					<a target="_blank" href="https://www.instagram.com" title="Instagram"></a>
-				</li>
-			</ul>
-		</header>
-		<nav>
-			<ul>
-				<li class="@(Model.CurrentTab == "Home" ? "selected" : "")">
-					@Html.ActionLink("Home", "Index", "Home")
-				</li>
-				<li class="@(Model.CurrentTab == "About" ? "selected" : "")">
-					@Html.ActionLink("About", "Index", "About")
-				</li>
-				<li class="@(Model.CurrentTab == "Contact" ? "selected" : "")">
-					@Html.ActionLink("Contact", "Index", "Contact")
-				</li>
-			</ul>
-		</nav>
-		<div class="main-content">
-			@RenderBody()
-		</div>
-		<footer>
-			RVA Roofing | <a href="mailto:rvaroofing.inc@gmail.com">Contact</a> | 8057 Elm Dr Mechanicsville, VA 23111-1160<br />
-			Address | @Html.ActionLink("Privacy", "Index", "Privacy")
-		</footer>
-	</div>
-	@Scripts.Render("~/Scripts")
-	@RenderSection("Scripts", false)
+    <div class="wrapper">
+        <header>
+            <ul id="social">
+                <li id="fb">
+                    <a target="_blank" href="https://www.facebook.com" title="Facebook"></a>
+                </li>
+                <li id="ig">
+                    <a target="_blank" href="https://www.instagram.com" title="Instagram"></a>
+                </li>
+            </ul>
+        </header>
+        <h1 class="center">
+            RVA Roofing Inc.
+        </h1>
+        <nav>
+            <ul>
+                <li class="@(Model.CurrentTab == "Home" ? "selected" : "")">
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                @*<li class="@(Model.CurrentTab == "About" ? "selected" : "")">
+                        @Html.ActionLink("About", "Index", "About")
+                    </li>*@
+                <li class="@(Model.CurrentTab == "Contact" ? "selected" : "")">
+                    @Html.ActionLink("Contact", "Index", "Contact")
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            @RenderBody()
+        </div>
+        <footer>
+            RVA Roofing | <a href="mailto:rvaroofing.inc@gmail.com">Contact</a> | 8057 Elm Dr Mechanicsville, VA 23111-1160<br />
+            Address | @Html.ActionLink("Privacy", "Index", "Privacy")
+        </footer>
+    </div>
+    @Scripts.Render("~/Scripts")
+    @RenderSection("Scripts", false)
 </body>
 </html>
